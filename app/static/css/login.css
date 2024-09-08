@@ -1,0 +1,116 @@
+/* Reset default browser styling */
+body,
+p,
+h1,
+form,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    /* Light cyan background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the login form */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin-bottom: 50px;
+    /* Added margin at the bottom */
+}
+
+/* Header styling */
+h1 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #007bff;
+    text-align: center;
+    /* Teal color for the header */
+}
+
+
+/* Input fields styling */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #007bff;
+    /* Teal border for input fields */
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fafafa;
+    /* Light gray background for input fields */
+}
+
+/* Input field focus effect */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background: #ffffff;
+    /* White background when focused */
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+    /* Light teal shadow on focus */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    /* Teal background for the button */
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #004d40;
+    /* Darker teal on hover */
+}
+
+/* Error message styling */
+p[style*="color: red;"] {
+    background: rgba(255, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Link to register page */
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    /* Changed from inline-block to block for better control */
+    margin-top: 70px;
+    font-size: 0.9em;
+    text-align: center;
+    /* Ensure it's centered */
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
