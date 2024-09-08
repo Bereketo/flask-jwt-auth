@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Token</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/handle_token.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Handle Token</h1>
+
+        <div class="actions">
+            <button id="fetch_token_button" class="btn">Fetch Token</button>
+            <input type="text" id="token_input" class="input-field" placeholder="Token will appear here" readonly />
+        </div>
+
+        <div class="actions">
+            <button id="verify_token_button" class="btn">Verify Token</button>
+            <button id="refresh_token_button" class="btn">Refresh Token</button>
+        </div>
+
+        <div class="results">
+            <h2>Results</h2>
+            <div id="token_result" class="result-item">
+                <strong>Token:</strong>
+                <textarea id="token_display" class="result-box" readonly></textarea>
+            </div>
+            <div id="verification_result" class="result-item">
+                <strong>Verification Result:</strong>
+                <div id="verify_result" class="result-box"></div>
+            </div>
+            <div id="refresh_result" class="result-item">
+                <strong>Refresh Result:</strong>
+                <div id="refresh_result" class="result-box"></div>
+            </div>
+        </div>
+
+        <div class="home-button">
+            <a href="{{ url_for('home') }}" class="btn home-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

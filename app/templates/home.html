@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
+                <li><a href="{{ url_for('register') }}" class="nav-link">Register</a></li>
+                <li><a href="{{ url_for('profile') }}" class="nav-link">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Welcome to token-based authentication</h1>
+            <p>Easy access, strong security.</p>
+            <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Secure Authentication</h3>
+                    <p>Our platform offers state-of-the-art security for your personal information.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>User-Friendly Interface</h3>
+                    <p>Enjoy a seamless experience with our easy-to-navigate interface.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Fast and Reliable</h3>
+                    <p>Experience lightning-fast performance and reliability.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Flask App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

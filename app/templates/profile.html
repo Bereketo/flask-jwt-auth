@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-pic-container">
+                <img src="{{ url_for('static', filename='images/profile-pic.jpeg') }}" alt="Profile Picture"
+                    class="profile-pic">
+            </div>
+            <div class="profile-info">
+                <h1>Welcome, {{ user.name }}</h1>
+                <p class="profile-email">Email: {{ user.email }}</p>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <a href="{{ url_for('handle_token') }}" class="action-button">Handle Token</a>
+            <a href="{{ url_for('home') }}" class="action-button">Home</a>
+            <form action="{{ url_for('logout') }}" method="post">
+                <button type="submit" class="action-button logout-button">Logout</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
